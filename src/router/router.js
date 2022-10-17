@@ -5,6 +5,7 @@ import Home from "../components/Home";
 import Login from "../components/Login";
 import Register from "../components/Register";
 import Main from "../layouts/Main";
+import PrivetRouter from "./PrivateRouter";
 
 export const router = createBrowserRouter([
   {
@@ -26,7 +27,7 @@ export const router = createBrowserRouter([
       },
       {
         path: '/dashboard',
-        element: <Dashboard></Dashboard>
+        element: <PrivetRouter><Dashboard></Dashboard></PrivetRouter>
       }
     ]
   }
